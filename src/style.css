@@ -1,0 +1,279 @@
+:root {
+  --gray: #e1e4e8;
+  --dark-gray: #6a737d;
+  --blue: #0366d6;
+  --black: #24292e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  padding: 10px 20px;
+  background-color: var(--black);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header img {
+  width: 32px;
+  height: 32px;
+  transition: 0.3s;
+}
+
+.header img:hover {
+  opacity: 0.5;
+}
+
+form {
+  position: relative;
+  display: block;
+  max-width: 300px;
+  width: 100%;
+}
+
+input {
+  display: block;
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 1px solid var(--dark-gray);
+  color: var(--dark-gray);
+}
+
+input:focus {
+  background-color: white;
+  color: var(--black);
+}
+
+.autocomplete {
+  position: absolute;
+  width: 100%;
+}
+
+.autocomplete p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--gray);
+  background-color: white;
+  border-top: none;
+  cursor: pointer;
+}
+
+.badge {
+  display: block;
+  background-color: white;
+  color: var(--dark-gray);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.autocomplete p:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.autocomplete p:hover {
+  background-color: var(--blue);
+  color: white;
+  border-color: var(--blue);
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.container {
+  padding: 0 5px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 20px;
+}
+
+.repos {
+}
+
+.repos__title {
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card {
+  border-top: 1px solid var(--gray);
+  padding: 10px;
+  display: flex;
+}
+
+.card a {
+  color: var(--blue);
+  transition: 0.3s;
+}
+
+.card a:hover {
+  border-bottom: 1px solid var(--blue);
+}
+
+.repos__card {
+  gap: 10px;
+}
+
+.repos__card img {
+  width: 12px;
+  height: 17px;
+  margin-top: 2px;
+  opacity: 0.5;
+}
+
+.repos__card-info > p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.language span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.language p {
+  font-size: 12px;
+  color: var(--dark-gray);
+}
+
+.followers__card {
+  padding: 20px 10px;
+  gap: 15px;
+}
+
+.followers__card img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid var(--gray);
+  border-radius: 50%;
+}
+
+.followers__card a {
+  font-size: 20px;
+}
+/* .repos__card a::before {
+  background-image: url(assets/repo-ico.png);
+  background-size: 12px 17px;
+  background-repeat: no-repeat;
+  display: block;
+  width: 12px;
+  height: 17px;
+  opacity: 0.5;
+  margin-right: 10px;
+  content: '';
+} */
+
+.tabs {
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  height: fit-content;
+}
+
+.tabs button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  background: transparent;
+  border: none;
+  padding: 10px 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-left: 2px solid transparent;
+}
+
+.tabs button.active {
+  border-left: 2px solid orange;
+}
+
+.tabs button:not(:last-child) {
+  border-bottom: solid 1px var(--gray);
+}
+
+.tabs button:hover {
+  background-color: var(--gray);
+}
+
+.tabs button:first-child {
+  border-top-left-radius: 5px;
+}
+.tabs button:last-child {
+  border-bottom-left-radius: 5px;
+}
+
+.followers {
+}
+
+.followers__title {
+}
+
+.followers__cards {
+}
+
+.error {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.error img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.error h1 {
+  margin-bottom: 20px;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .profile {
+    grid-template-columns: 1fr;
+  }
+  .tabs {
+    display: flex;
+  }
+  .followers__card img {
+    width: 75px;
+    height: 75px;
+  }
+}

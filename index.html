@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="header">
+      <img src="./src/assets/logo.png" />
+      <form>
+        <input type="text" placeholder="Search or jump to..." />
+        <div class="autocomplete hide"></div>
+      </form>
+    </div>
+    <div class="container">
+      <div class="profile hide">
+        <div class="tabs">
+          <button class="active">Repos</button>
+          <button>Followers</button>
+        </div>
+        <div class="repos hide">
+          <div class="repos__title title">Repos</div>
+          <div class="repos__cards"></div>
+        </div>
+        <div class="followers hide">
+          <div class="followers__title title">Followers</div>
+          <div class="followers__cards"></div>
+        </div>
+        <div class="error hide">
+          <img src="./src/assets/loupe.png" />
+          <div>
+            <h1>404 Not Found</h1>
+            <h3></h3>
+          </div>
+        </div>
+      </div>
+      <div class="error hide">
+        <img src="./src/assets/loupe.png" />
+        <div>
+          <h1>Not Found</h1>
+          <h3>We couldn’t find any users</h3>
+        </div>
+      </div>
+    </div>
+    <script src="./src/index.js"></script>
+  </body>
+</html>
