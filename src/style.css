@@ -110,12 +110,6 @@ input:focus {
   gap: 20px;
 }
 
-.repos {
-}
-
-.repos__title {
-}
-
 .title {
   font-size: 20px;
   font-weight: bold;
@@ -235,15 +229,6 @@ input:focus {
 }
 .tabs button:last-child {
   border-bottom-left-radius: 5px;
-}
-
-.followers {
-}
-
-.followers__title {
-}
-
-.followers__cards {
 }
 
 .error {
